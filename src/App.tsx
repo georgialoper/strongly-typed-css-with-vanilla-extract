@@ -2,6 +2,6 @@ import { Heading } from './components/Heading'
 
 export const App = () => (
   <>
-    <Heading>🧁 Hello, CodeMash!</Heading>
+    <Heading variant='tertiary'>🧁 Hello, CodeMash!</Heading>
   </>
 );

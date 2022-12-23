@@ -1,11 +1,13 @@
 import React from 'react'
 
-import {root} from './Heading.css'
+import { variants } from './Heading.css'
 
-interface HeadingProps extends React.ComponentProps<'h1'> {}
+interface HeadingProps extends React.ComponentProps<'h1'> {
+  variant: keyof typeof variants
+}
 
-export const Heading = ({children}: HeadingProps) => (
-  <div className={root}>
+export const Heading = ({variant, children}: HeadingProps) => (
+  <div className={variants[variant]}>
     <h1>{children}</h1>
   </div>
 )

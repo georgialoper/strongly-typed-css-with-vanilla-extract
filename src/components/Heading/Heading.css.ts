@@ -1,11 +1,17 @@
-import { style } from '@vanilla-extract/css'
+import { styleVariants } from '@vanilla-extract/css'
 
-export const root = style({
-  backgroundColor: "navy",
-  color: "plum",
-  selectors: {
-    "&:hover": {
-      backgroundColor: "indigo"
-    }
+
+export const variants = styleVariants({
+  primary: {
+    backgroundColor: "navy",
+    color: "plum"
+  },
+  secondary: {
+    backgroundColor: "plum",
+    color: "navy"
+  },
+  tertiary: {
+    backgroundColor: "indigo",
+    color: "plum"
   }
 })
