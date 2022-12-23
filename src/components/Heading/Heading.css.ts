@@ -1,22 +1,24 @@
 import { style, styleVariants } from "@vanilla-extract/css";
 
+import { vars } from "../../styles/theme.css";
+
 const space = style({
-  padding: "1rem",
+  padding: vars.space.s,
 });
 
 export const variants = styleVariants({
   primary: [
     space,
     {
-      backgroundColor: "navy",
-      color: "plum",
+      backgroundColor: vars.color.primary,
+      color: vars.color.secondary,
     },
   ],
   secondary: [
     space,
     {
-      backgroundColor: "plum",
-      color: "navy",
+      backgroundColor: vars.color.secondary,
+      color: vars.color.primary,
     },
   ],
 });
