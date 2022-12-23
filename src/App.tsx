@@ -1,7 +1,7 @@
-import { Heading } from './components/Heading'
+import { Heading } from "./components/Heading";
 
 export const App = () => (
   <>
-    <Heading variant='tertiary'>🧁 Hello, CodeMash!</Heading>
+    <Heading variant="primary">🧁 Hello, CodeMash!</Heading>
   </>
 );

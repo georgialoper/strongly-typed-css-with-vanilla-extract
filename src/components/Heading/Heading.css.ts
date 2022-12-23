@@ -1,17 +1,22 @@
-import { styleVariants } from '@vanilla-extract/css'
+import { style, styleVariants } from "@vanilla-extract/css";
 
+const space = style({
+  padding: "1rem",
+});
 
 export const variants = styleVariants({
-  primary: {
-    backgroundColor: "navy",
-    color: "plum"
-  },
-  secondary: {
-    backgroundColor: "plum",
-    color: "navy"
-  },
-  tertiary: {
-    backgroundColor: "indigo",
-    color: "plum"
-  }
-})
+  primary: [
+    space,
+    {
+      backgroundColor: "navy",
+      color: "plum",
+    },
+  ],
+  secondary: [
+    space,
+    {
+      backgroundColor: "plum",
+      color: "navy",
+    },
+  ],
+});
