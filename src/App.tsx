@@ -1,20 +1,8 @@
 import { Heading } from "./components/Heading";
-import { baseThemeClass, vars } from "./styles/theme.css";
-import { assignInlineVars } from "@vanilla-extract/dynamic";
+import { baseThemeClass } from "./styles/theme.css";
 
 export const App = () => (
-  <div
-    className={baseThemeClass}
-    style={assignInlineVars(vars, {
-      color: {
-        primary: "teal",
-        secondary: "aqua",
-      },
-      space: {
-        ...vars.space,
-      },
-    })}
-  >
+  <div className={baseThemeClass}>
     <Heading variant="primary">🧁 Hello, CodeMash!</Heading>
   </div>
 );

@@ -1,24 +1,27 @@
 import { style, styleVariants } from "@vanilla-extract/css";
 
-import { vars } from "../../styles/theme.css";
+import { sprinklesFn } from "../../styles/sprinkles.css";
 
-const space = style({
-  padding: vars.space.s,
-});
+const space = style([
+  sprinklesFn({
+    paddingX: "s",
+    paddingY: "m",
+  }),
+]);
 
 export const variants = styleVariants({
   primary: [
     space,
-    {
-      backgroundColor: vars.color.primary,
-      color: vars.color.secondary,
-    },
+    sprinklesFn({
+      backgroundColor: "primary",
+      color: "secondary",
+    }),
   ],
   secondary: [
     space,
-    {
-      backgroundColor: vars.color.secondary,
-      color: vars.color.primary,
-    },
+    sprinklesFn({
+      backgroundColor: "secondary",
+      color: "primary",
+    }),
   ],
 });
