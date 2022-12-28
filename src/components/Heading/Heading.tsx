@@ -1,19 +1,22 @@
 import React from "react";
 
-import { sprinklesFn, Sprinkles } from "../../styles/sprinkles.css";
+import { Sprinkles } from "../../styles/sprinkles.css";
+
+import { Box } from "../Box";
 
 interface HeadingProps extends React.ComponentProps<"h1"> {
   backgroundColor?: Sprinkles["color"];
 }
 
 export const Heading = ({ backgroundColor, children }: HeadingProps) => (
-  <div
-    className={sprinklesFn({
+  <Box
+    as="h1"
+    sprinkles={{
       backgroundColor: backgroundColor,
       color: "secondary",
       padding: "s",
-    })}
+    }}
   >
     <h1>{children}</h1>
-  </div>
+  </Box>
 );
