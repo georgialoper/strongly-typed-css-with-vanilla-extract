@@ -24,3 +24,5 @@ const properties = defineProperties({
 });
 
 export const sprinklesFn = createSprinkles(properties);
+
+export type Sprinkles = Parameters<typeof sprinklesFn>[0];

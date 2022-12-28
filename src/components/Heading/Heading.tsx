@@ -1,13 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import { variants } from './Heading.css'
+import { sprinklesFn, Sprinkles } from "../../styles/sprinkles.css";
 
-interface HeadingProps extends React.ComponentProps<'h1'> {
-  variant: keyof typeof variants
+interface HeadingProps extends React.ComponentProps<"h1"> {
+  backgroundColor?: Sprinkles["color"];
 }
 
-export const Heading = ({variant, children}: HeadingProps) => (
-  <div className={variants[variant]}>
+export const Heading = ({ backgroundColor, children }: HeadingProps) => (
+  <div
+    className={sprinklesFn({
+      backgroundColor: backgroundColor,
+      color: "secondary",
+      padding: "s",
+    })}
+  >
     <h1>{children}</h1>
   </div>
-)
+);

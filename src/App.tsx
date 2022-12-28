@@ -3,6 +3,6 @@ import { baseThemeClass } from "./styles/theme.css";
 
 export const App = () => (
   <div className={baseThemeClass}>
-    <Heading variant="primary">🧁 Hello, CodeMash!</Heading>
+    <Heading backgroundColor="primary">🧁 Hello, CodeMash!</Heading>
   </div>
 );
