@@ -1,15 +1,12 @@
-const path = require('path');
-const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { VanillaExtractPlugin } = require("@vanilla-extract/webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: path.join(__dirname, './src/index.tsx'),
-  mode: 'development',
+  mode: "development",
   resolve: {
-    extensions: ['.js', '.json', '.ts', '.tsx'],
+    extensions: [".js", ".json", ".ts", ".tsx"],
   },
-  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -17,13 +14,13 @@ module.exports = {
         exclude: [/node_modules/],
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
           },
         ],
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
@@ -32,5 +29,4 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new VanillaExtractPlugin(),
   ],
-  stats: 'minimal',
 };
