@@ -1,6 +1,6 @@
-# Minimal Vanilla-extract + webpack example
+# Strongly-types CSS with Vanilla-extract
 
-A minimal starter application with [vanilla-extract](https://vanilla-extract.style/) (and TypeScript, of course) on webpack.
+Based on [minimal-vanilla-extract-webpack-example](https://github.com/georgialoper/minimal-vanilla-extract-webpack-example), each commit of this repo demonstrates a simple usage of a different piece of [vanilla-extract's](https://vanilla-extract.style/) functionality.
 
 ## Getting Started
 
