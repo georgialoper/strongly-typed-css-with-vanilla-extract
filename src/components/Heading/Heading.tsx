@@ -4,17 +4,19 @@ import { Sprinkles } from "../../styles/sprinkles.css";
 
 import { Box } from "../Box";
 
-interface HeadingProps extends React.ComponentProps<"h1"> {
+interface HeadingProps extends Omit<React.ComponentProps<"h1">, 'color'> {
   backgroundColor?: Sprinkles["color"];
+  color?: Sprinkles["color"];
+  padding?: Sprinkles["padding"]
 }
 
-export const Heading = ({ backgroundColor, children }: HeadingProps) => (
+export const Heading = ({ backgroundColor, color, padding, children }: HeadingProps) => (
   <Box
     as="h1"
     sprinkles={{
-      backgroundColor: backgroundColor,
-      color: "secondary",
-      padding: "s",
+      backgroundColor,
+      color,
+      padding,
     }}
   >
     <h1>{children}</h1>
